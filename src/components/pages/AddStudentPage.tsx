@@ -26,7 +26,6 @@ function AddStudentPage() {
           <TextField id="outlined-uncontrolled" label="Uncontrolled" />
           <TextField id="outlined-uncontrolled" label="Uncontrolled" />
         </Box>
-        <Prbutton buttontext="Submit" />
       </Box>
     </>
   );
