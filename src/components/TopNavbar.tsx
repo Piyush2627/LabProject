@@ -113,7 +113,7 @@ const Drawer = styled(MuiDrawer, {
 
 export default function TopNavbar() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   return (
     <Box sx={{ display: "flex" }}>

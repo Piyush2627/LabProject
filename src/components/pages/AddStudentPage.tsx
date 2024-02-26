@@ -1,9 +1,14 @@
 import React from "react";
+
+//Matrial Ui Component
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { Divider } from "@mui/material";
-import Prbutton from "../common/PrButton/Prbutton";
+import Button from "@mui/material/Button";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
+//Coustom Components
+import StudentPagenationTable from "../common/studentPagenationTable/StudentPagenationTable";
 
 function AddStudentPage() {
   return (
@@ -21,11 +26,17 @@ function AddStudentPage() {
           }}
         >
           <Typography>Enter your basic details</Typography>
-          <TextField id="outlined-uncontrolled" label="Uncontrolled" />
-          <TextField id="outlined-uncontrolled" label="Uncontrolled" />
-          <TextField id="outlined-uncontrolled" label="Uncontrolled" />
-          <TextField id="outlined-uncontrolled" label="Uncontrolled" />
+          <TextField id="outlined-uncontrolled" label="First Name" />
+          <TextField id="outlined-uncontrolled" label="Last Name" />
+          <TextField id="outlined-uncontrolled" label="Enroll No / Roll No" />
+          <TextField id="outlined-uncontrolled" label="Batch" />
+          <Box>
+            <Button variant="contained" endIcon={<PersonAddIcon />}>
+              Send
+            </Button>
+          </Box>
         </Box>
+        <StudentPagenationTable />
       </Box>
     </>
   );
