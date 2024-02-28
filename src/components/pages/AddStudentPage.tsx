@@ -30,6 +30,7 @@ function AddStudentPage() {
           <TextField id="outlined-uncontrolled" label="Last Name" />
           <TextField id="outlined-uncontrolled" label="Enroll No / Roll No" />
           <TextField id="outlined-uncontrolled" label="Batch" />
+          <TextField id="outlined-uncontrolled" label="Year" />
           <Box>
             <Button variant="contained" endIcon={<PersonAddIcon />}>
               Send

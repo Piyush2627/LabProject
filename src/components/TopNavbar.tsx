@@ -21,6 +21,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 import StorageIcon from "@mui/icons-material/Storage";
 import AddStudentPage from "./pages/AddStudentPage";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const drawerWidth = 240;
 
@@ -196,6 +197,8 @@ export default function TopNavbar() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
+        {/* components */}
+        <Dashboard />
         <AddStudentPage />
       </Box>
     </Box>
