@@ -14,32 +14,35 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { MenuBook } from "@mui/icons-material";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 import StorageIcon from "@mui/icons-material/Storage";
-import AddStudentPage from "./pages/AddStudentPage";
+import AddStudentPage from "./pages/AddStudentPage/AddStudentPage";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const drawerWidth = 240;
 
 const sidelist = [
   {
+    name: "Dashboard",
+    link: "/coldDrink",
+    icon: <DashboardIcon sx={{ color: "#1976d2" }} />,
+  },
+  {
     name: "Add New Student",
     link: "/coldDrink",
-    icon: <PersonAddIcon />,
+    icon: <PersonAddIcon sx={{ color: "#1976d2" }} />,
   },
   {
     name: "Mark Attedence",
     link: "/HotDrink",
-    icon: <DataObjectIcon />,
+    icon: <DataObjectIcon sx={{ color: "#1976d2" }} />,
   },
   {
     name: "chease Cake",
     link: "/CheaseCake",
-    icon: <StorageIcon />,
+    icon: <StorageIcon sx={{ color: "#1976d2" }} />,
   },
 ];
 
@@ -198,7 +201,7 @@ export default function TopNavbar() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         {/* components */}
-        <Dashboard />
+        {/* <Dashboard /> */}
         <AddStudentPage />
       </Box>
     </Box>

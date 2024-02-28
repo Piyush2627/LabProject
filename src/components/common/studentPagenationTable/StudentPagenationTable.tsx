@@ -8,7 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 //mock data
-import data from "../../../mock/MOCK_DATA.json";
+import data from "../../../mock/StudentData.json";
 
 export default function StudentPagenationTable() {
   return (
