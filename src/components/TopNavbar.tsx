@@ -20,23 +20,25 @@ import StorageIcon from "@mui/icons-material/Storage";
 import AddStudentPage from "./pages/AddStudentPage/AddStudentPage";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
 const sidelist = [
   {
     name: "Dashboard",
-    link: "/coldDrink",
+    link: "/",
     icon: <DashboardIcon sx={{ color: "#1976d2" }} />,
   },
   {
     name: "Add New Student",
-    link: "/coldDrink",
+    link: "/addstudent",
     icon: <PersonAddIcon sx={{ color: "#1976d2" }} />,
   },
   {
     name: "Mark Attedence",
-    link: "/HotDrink",
+    link: "/markattedence",
     icon: <DataObjectIcon sx={{ color: "#1976d2" }} />,
   },
   {
@@ -170,13 +172,16 @@ export default function TopNavbar() {
           {sidelist.map((ele, index) => {
             return (
               <div>
-                <ListItem disablePadding sx={{ display: "block" }}>
+                <ListItem button component={Link} to={ele.link} disablePadding sx={{ display: "block" }} >
+
                   <ListItemButton
                     sx={{
                       minHeight: 48,
                       justifyContent: open ? "initial" : "center",
                       px: 2.5,
                     }}
+
+
                   >
                     <ListItemIcon
                       sx={{
@@ -190,6 +195,7 @@ export default function TopNavbar() {
                     <ListItemText
                       primary={ele.name}
                       sx={{ opacity: open ? 1 : 0 }}
+
                     />
                   </ListItemButton>
                 </ListItem>
@@ -201,9 +207,10 @@ export default function TopNavbar() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         {/* components */}
-        {/* <Dashboard /> */}
-        <AddStudentPage />
+        {/* <Dashboard />/ */}
+
+        <Outlet />
       </Box>
-    </Box>
+    </Box >
   );
 }

@@ -29,13 +29,13 @@ export default function StudentPagenationTable() {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.first_name}
+                {row.student_first_name}
               </TableCell>
               <TableCell component="th" scope="row">
-                {row.last_name}
+                {row.student_last_name}
               </TableCell>
               <TableCell>{row.student_id}</TableCell>
-              <TableCell>{row["A-Z"]}</TableCell>
+              <TableCell>{row.batch}</TableCell>
             </TableRow>
           ))}
         </TableBody>
