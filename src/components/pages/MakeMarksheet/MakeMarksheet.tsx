@@ -1,12 +1,8 @@
-import React from 'react'
-
+import React from "react";
+import MarksheetDoc from "./MarksheetDoc";
 
 function MakeMarksheet() {
-    return (
-        <div>
-            dacumernt
-        </div>
-    )
+  return <div></div>;
 }
 
-export default MakeMarksheet
+export default MakeMarksheet;
