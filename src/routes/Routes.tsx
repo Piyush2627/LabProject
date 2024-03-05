@@ -4,6 +4,7 @@ import TopNavbar from '../components/TopNavbar';
 import AddStudentPage from '../components/pages/AddStudentPage/AddStudentPage';
 import Dashboard from "../components/pages/Dashboard/Dashboard";
 import MarkAttedence from '../components/pages/MarkAttedence/MarkAttedence';
+import MakeMarksheet from '../components/pages/MakeMarksheet/MakeMarksheet';
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,10 @@ const router = createBrowserRouter([
                 path: "/markattedence",
                 element: <MarkAttedence />
             },
-
+            {
+                path: "/makemarksheet",
+                element: <MakeMarksheet />
+            },
         ]
     },
 ]);

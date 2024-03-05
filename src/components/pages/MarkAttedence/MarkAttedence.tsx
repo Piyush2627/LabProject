@@ -3,7 +3,7 @@ import React from 'react'
 function MarkAttedence() {
     return (
         <div>
-            Mark Attedence
+            make Att
         </div>
     )
 }

@@ -42,8 +42,8 @@ const sidelist = [
     icon: <DataObjectIcon sx={{ color: "#1976d2" }} />,
   },
   {
-    name: "chease Cake",
-    link: "/CheaseCake",
+    name: "Make Marksheet",
+    link: "/makemarksheet",
     icon: <StorageIcon sx={{ color: "#1976d2" }} />,
   },
 ];
