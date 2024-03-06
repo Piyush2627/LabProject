@@ -12,13 +12,13 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
 });
-
+var data = "piyush"
 function MarksheetDoc() {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
-          <Text>Section #1</Text>
+          <Text>{data}</Text>
         </View>
         <View style={styles.section}>
           <Text>Section #2</Text>
