@@ -19,7 +19,7 @@ import DataObjectIcon from "@mui/icons-material/DataObject";
 import StorageIcon from "@mui/icons-material/Storage";
 import AddStudentPage from "./pages/AddStudentPage/AddStudentPage";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import DashboardIcon from "@mui/icons-material/Dashboard";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -146,42 +146,22 @@ export default function TopNavbar() {
         <DrawerHeader></DrawerHeader>
         <Divider />
         <List>
-          {/* {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))} */}
-
           {sidelist.map((ele, index) => {
             return (
-              <div>
-                <ListItem button component={Link} to={ele.link} disablePadding sx={{ display: "block" }} >
-
+              <div key={index}>
+                <ListItem
+                  button
+                  component={Link}
+                  to={ele.link}
+                  disablePadding
+                  sx={{ display: "block" }}
+                >
                   <ListItemButton
                     sx={{
                       minHeight: 48,
                       justifyContent: open ? "initial" : "center",
                       px: 2.5,
                     }}
-
-
                   >
                     <ListItemIcon
                       sx={{
@@ -195,7 +175,6 @@ export default function TopNavbar() {
                     <ListItemText
                       primary={ele.name}
                       sx={{ opacity: open ? 1 : 0 }}
-
                     />
                   </ListItemButton>
                 </ListItem>
@@ -211,6 +190,6 @@ export default function TopNavbar() {
 
         <Outlet />
       </Box>
-    </Box >
+    </Box>
   );
 }

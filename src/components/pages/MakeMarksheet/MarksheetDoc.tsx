@@ -7,24 +7,24 @@ const styles = StyleSheet.create({
     backgroundColor: "#E4E4E4",
   },
   section: {
+    border: "2px solid black",
     margin: 10,
     padding: 10,
     flexGrow: 1,
   },
 });
-var data = "piyush"
 function MarksheetDoc() {
   return (
-    <Document>
-      <Page size="A4" style={styles.page}>
-        <View style={styles.section}>
-          <Text>{data}</Text>
-        </View>
-        <View style={styles.section}>
-          <Text>Section #2</Text>
-        </View>
-      </Page>
-    </Document>
+    <>
+      {" "}
+      <Document>
+        <Page size="A4" style={styles.page}>
+          <View style={styles.section}>
+            <Text>any thing you want</Text>
+          </View>
+        </Page>
+      </Document>
+    </>
   );
 }
 

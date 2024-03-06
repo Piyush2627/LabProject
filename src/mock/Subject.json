@@ -1,0 +1,25 @@
+[
+  {
+    "subjectName": "C",
+    "sub_subjectName": ["sxy1", "sxy2", "sxy3", "sxy4", "sxy5,sxy6", "sxy7"]
+  },
+  {
+    "subjectName": "Javascript",
+    "sub_subjectName": ["js1", "js2", "js3", "js4", "js5,js6", "js7"]
+  },
+  {
+    "subjectName": "Java",
+    "sub_subjectName": [
+      "java1",
+      "java2",
+      "java3",
+      "java4",
+      "java5,java6",
+      "java7"
+    ]
+  },
+  {
+    "subjectName": "Java Script ",
+    "sub_subjectName": ["js1", "js2", "js3", "js4", "js5,js6", "js7"]
+  }
+]

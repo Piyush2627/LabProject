@@ -11,6 +11,7 @@ function MakeMarksheet() {
           loading ? "Loading document..." : "Download now!"
         }
       </PDFDownloadLink>
+      <PDFViewer children={<MarksheetDoc />}></PDFViewer>
     </>
   );
 }
