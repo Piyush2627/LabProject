@@ -9,13 +9,13 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import SubjectData from "../../../mock/Subject.json";
-let input: any;
+import SubjectSubTopic from "../MakeMarksheet/SubjectSubTopic";
 
 function MarkAttedence() {
-  const [index, setindex] = React.useState("");
+  const [index, setindex] = React.useState<number | null>(null);
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setindex(event.target.value as string);
+  const handleChange = (event: SelectChangeEvent<number>) => {
+    setindex(event.target.value as number);
   };
 
   return (
@@ -28,34 +28,42 @@ function MarkAttedence() {
           padding: "2rem 0rem",
         }}
       >
-        <TextField
-          id="outlined-basic"
-          label="Outlined"
-          variant="outlined"
-          inputRef={(node) => {
-            input = node;
-          }}
-        />
+        {" "}
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       </Box>
-      <InputLabel id="demo-simple-select-label">index</InputLabel>
+      <Box sx={{ marginBottom: "16px" }}>
+        <Typography variant="body1">Select Subject</Typography>
+      </Box>
 
-      <Select
-        labelId="demo-simple-select-label"
-        id="demo-simple-select"
-        value={index}
-        label="index"
-        onChange={handleChange}
-      >
-        {SubjectData.map((ele, index) => {
-          return (
-            <MenuItem key={index} value={index}>
-              {ele.subjectName}
-            </MenuItem>
-          );
-        })}
-      </Select>
-
-      <Box> {index + 1}</Box>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Subject</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={index ?? ""}
+          label="Subject"
+          onChange={handleChange}
+        >
+          {SubjectData.map((ele, index) => {
+            return (
+              <MenuItem key={index} value={index}>
+                {ele.subjectName}
+              </MenuItem>
+            );
+          })}
+        </Select>
+      </FormControl>
+      <Box>
+        <div className="">
+          <p className="text-md py-3"> Sub Topic of the Subject</p>
+          <div>
+            {index !== null &&
+              SubjectData[index].sub_subjectName.map((subSubject, idx) => (
+                <SubjectSubTopic key={idx} subtopics={subSubject} />
+              ))}
+          </div>
+        </div>
+      </Box>
     </div>
   );
 }
