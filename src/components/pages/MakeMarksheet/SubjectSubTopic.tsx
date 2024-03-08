@@ -7,9 +7,10 @@ interface Props {
 function SubjectSubTopic({ subtopics }: Props) {
   return (
     <div>
-      {subtopics}
-      is having this topics
-      <TextField id="outlined-basic" label={subtopics} variant="outlined" />
+      <div className="p-3 flex align-middle">
+        <div>{subtopics}</div>
+        <div></div>
+      </div>
     </div>
   );
 }

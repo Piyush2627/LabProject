@@ -6,23 +6,22 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { SelectChangeEvent } from "@mui/material/Select";
 
-
 import { Divider } from "@mui/material";
 import Button from "@mui/material/Button";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 //Coustom Components
 import StudentPagenationTable from "../../common/studentPagenationTable/StudentPagenationTable";
 import SelectAutoWidth from "../../common/SelectAutoWidth/SelectAutoWidth";
-
+import StudentData from "../../../mock/StudentData.json";
 function AddStudentPage() {
-  const [sem, setSem] = React.useState('Age');
+  const [sem, setSem] = React.useState("Age");
   const handleChange = (event: SelectChangeEvent) => {
     setSem(event.target.value as string);
   };
   return (
     <>
       <Box>
-        <Typography variant="h3">Add New Student</Typography>
+        <Typography variant="h2">Add New Student</Typography>
         <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, cum!
         </Typography>
@@ -47,7 +46,9 @@ function AddStudentPage() {
             </Button>
           </Box>
         </Box>
-        <StudentPagenationTable />
+        <div className="mt-5">
+          <StudentPagenationTable data={StudentData} />
+        </div>
       </Box>
     </>
   );
