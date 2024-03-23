@@ -5,7 +5,7 @@ import AddStudentPage from "../components/pages/AddStudentPage/AddStudentPage";
 import Dashboard from "../components/pages/Dashboard/Dashboard";
 import MarkAttedence from "../components/pages/MarkAttedence/MarkAttedence";
 import MakeMarksheet from "../components/pages/MakeMarksheet/MakeMarksheet";
-import Navigation from "../components/common/Navigation/Navigation";
+import MainLayout from "./MainLayout";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +32,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Navigation />,
+    element: <MainLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Dashboard />,
+      },
+    ],
   },
 ]);
 
