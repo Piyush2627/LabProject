@@ -36,10 +36,10 @@ function MakeMarksheet() {
 
   return (
     <>
-      <div>
-        <div className=" flex justify-between">
+      <div className="containern m-auto mx-9 mt-9">
+        <div className=" flex justify-between ">
           <div>
-            <Typography variant="h2">Make Sheet</Typography>
+            <div className=" text-6xl">Make Sheet</div>
           </div>
           <div>
             <PDFDownloadLink

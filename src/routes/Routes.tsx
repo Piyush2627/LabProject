@@ -38,6 +38,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Dashboard />,
       },
+      {
+        path: "/markmarksheet",
+        element: <MakeMarksheet />,
+      },
     ],
   },
 ]);

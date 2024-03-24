@@ -4,6 +4,7 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import SideNavBar from "../SideNavBar/SideNavBar";
 import AttachmentIcon from "@mui/icons-material/Attachment";
 import NavSearvh from "../NavSearch/NavSearvh";
+import ProfileSideBar from "../ProfileSideBar/ProfileSideBar";
 function Navigation() {
   const [sideNavBar, setSideNavBar] = React.useState(false);
   const [profileDraweer, setProfileDraweer] = React.useState(false);
@@ -102,9 +103,9 @@ function Navigation() {
       {profileDraweer && (
         <div
           ref={profileDraweeref}
-          className=" bg-white h-full w-80 absolute top-0 right-0 z-50 rounded-lg border-r-2 border-gray-300 p-4"
+          className=" bg-white h-full w-80 absolute top-0 right-0 z-50 rounded-lg border-l-2 border-gray-300 p-4"
         >
-          profile
+          <ProfileSideBar />
         </div>
       )}
     </>
