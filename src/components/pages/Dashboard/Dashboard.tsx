@@ -3,15 +3,32 @@ import BasicCard from "../../common/BasicCard/BasicCard";
 import StudentPagenationTable from "../../common/studentPagenationTable/StudentPagenationTable";
 import data from "../../../mock/StudentData.json";
 import ListCard from "../../common/ListCard.tsx/LIstCard";
-
+const demodata = [
+  {
+    itemHeading: "Student",
+  },
+  {
+    itemHeading: "Subject",
+  },
+  {
+    itemHeading: "Batch",
+  },
+];
 function Dashboard() {
   return (
     <>
       <div className="block lg:flex ">
         <div className=" w-full flex-grow  lg:max-w-xs justify-center  p-4 border-r space-y-4 lg:h-screen lg:sticky top-0">
-          <ListCard listHeading="Dashboard" />
-          <ListCard listHeading="Dashboard" />
-          <ListCard listHeading="Dashboard" />
+          {demodata.map((ele) => {
+            return (
+              <ListCard
+                listHeading={ele.itemHeading}
+                listData={data[ele.itemHeading]}
+                emailrequired={true}
+                amountRequired={true}
+              />
+            );
+          })}
         </div>
         <div className=" flex justify-center w-full">
           <div className="mx-6 w-full">

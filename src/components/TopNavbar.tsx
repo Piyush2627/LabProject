@@ -28,22 +28,22 @@ const drawerWidth = 240;
 const sidelist = [
   {
     name: "Dashboard",
-    link: "/",
+    link: "/oldservices",
     icon: <DashboardIcon sx={{ color: "#1976d2" }} />,
   },
   {
     name: "Add New Student",
-    link: "/addstudent",
+    link: "/oldservices/addstudent",
     icon: <PersonAddIcon sx={{ color: "#1976d2" }} />,
   },
   {
     name: "Mark Attedence",
-    link: "/markattedence",
+    link: "/oldservices/markattedence",
     icon: <DataObjectIcon sx={{ color: "#1976d2" }} />,
   },
   {
     name: "Make Marksheet",
-    link: "/makemarksheet",
+    link: "/oldservices/makemarksheet",
     icon: <StorageIcon sx={{ color: "#1976d2" }} />,
   },
 ];

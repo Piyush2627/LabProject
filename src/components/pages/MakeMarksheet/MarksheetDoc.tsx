@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   section: {
-    border: "2px solid black",
     margin: 10,
     padding: 10,
     flexGrow: 1,

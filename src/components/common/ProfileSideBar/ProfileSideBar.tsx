@@ -4,9 +4,7 @@ import ListCard from "../ListCard.tsx/LIstCard";
 function ProfileSideBar() {
   return (
     <>
-      <div className="">
-        <ListCard listHeading="Prodile list" />
-      </div>
+      <div className=""></div>
     </>
   );
 }
