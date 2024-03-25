@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
 import MarksheetDoc from "./MarksheetDoc";
-import { PDFDownloadLink, Document, Page } from "@react-pdf/renderer";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { SelectChangeEvent } from "@mui/material/Select";
@@ -14,10 +13,17 @@ import SubjectSubTopic from "../MakeMarksheet/SubjectSubTopic";
 import Autocomplete, {
   AutocompleteChangeReason,
 } from "@mui/material/Autocomplete";
+//Js pdf file component
 //Json data source
 import SubjectData from "../../../mock/Subject.json";
 import StudentData from "../../../mock/StudentData.json";
 import StudentPagenationTable from "../../common/studentPagenationTable/StudentPagenationTable";
+
+//pdf component logic
+
+function deco() {
+  return <div>hello</div>;
+}
 
 function MakeMarksheet() {
   const [index, setindex] = React.useState<number | null>(null);
@@ -36,35 +42,12 @@ function MakeMarksheet() {
 
   return (
     <>
-      <div className="containern m-auto mx-9 mt-9">
+      <div className="w-full mx-6 mt-12">
         <div className=" flex justify-between ">
           <div>
             <div className=" text-6xl">Make Sheet</div>
           </div>
-          <div>
-            <PDFDownloadLink
-              document={<MarksheetDoc />}
-              fileName="somename.pdf"
-            >
-              {({ blob, url, loading, error }) =>
-                loading ? (
-                  <button
-                    type="button"
-                    className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-                  >
-                    Loading
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                  >
-                    Download now
-                  </button>
-                )
-              }
-            </PDFDownloadLink>
-          </div>
+          <div></div>
         </div>
 
         <Typography variant="subtitle1">Mark student Marksheet</Typography>

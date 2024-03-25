@@ -64,7 +64,7 @@ function Navigation() {
                 >
                   <MenuRoundedIcon />
                 </button>
-                <div className=" pr-5 text-lg">Logo And Name</div>
+                <div className=" pr-5 text-lg">And Name</div>
               </div>
             </div>
             <div className="  items-center gap-4 flex ">

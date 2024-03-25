@@ -5,7 +5,7 @@ import AddStudentPage from "../components/pages/AddStudentPage/AddStudentPage";
 import Dashboard from "../components/pages/Dashboard/Dashboard";
 import MarkAttedence from "../components/pages/MarkAttedence/MarkAttedence";
 import MakeMarksheet from "../components/pages/MakeMarksheet/MakeMarksheet";
-import MainLayout from "./MainLayout";
+import DasboardLayout from "./DasboardLayout";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <MainLayout />,
+    element: <DasboardLayout />,
     children: [
       {
         path: "/",
@@ -41,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/markmarksheet",
         element: <MakeMarksheet />,
+      },
+      {
+        path: "/attedence",
+        element: <MarkAttedence />,
       },
     ],
   },

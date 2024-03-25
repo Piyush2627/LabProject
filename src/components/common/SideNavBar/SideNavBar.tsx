@@ -1,5 +1,6 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import DashboardSidebar from "../DashboardSidebar/DashboardSidebar";
 interface SideBarProp {
   toggleSidebar: () => void;
 }
@@ -15,10 +16,7 @@ function SideNavBar({ toggleSidebar }: SideBarProp) {
           <CloseIcon />
         </button>
       </div>
-      hello Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-      facere quaerat asperiores! Ipsa at corrupti vel commodi animi ipsum
-      repellat dolore culpa! Cupiditate saepe quia dignissimos corrupti maxime
-      aut perspiciatis modi voluptatum quisquam possimus ipsam eaque alias
+      <DashboardSidebar />
     </div>
   );
 }

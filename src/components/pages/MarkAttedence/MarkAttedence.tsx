@@ -1,7 +1,12 @@
 import React from "react";
+import MarksheetDoc from "../MakeMarksheet/MarksheetDoc";
 
 function MarkAttedence() {
-  return <>hello</>;
+  return (
+    <div className="w-full">
+      <MarksheetDoc />
+    </div>
+  );
 }
 
 export default MarkAttedence;
